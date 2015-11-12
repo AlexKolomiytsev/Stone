@@ -1,0 +1,387 @@
+@import url("myVariables.less");
+@import url("myFonts.less");
+@import url("myMixins.less");
+
+body {
+	background: url(../images/bg.jpg);
+	background-attachment: fixed;
+	a:hover{
+		text-decoration: none;
+	}
+}
+
+
+
+.header {
+	background: url(../images/slide1.jpg) no-repeat;
+	background-size: 100% 120%;
+	//background-clip: content-box;
+	height: 650px;
+	.logo {
+		position: relative;
+		top: 17px;
+		margin-left: 54px;
+		h2 {
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			//vertical-align: bottom;
+			font-family: Righteous;
+			font-size: 42px;
+			margin-left: 20px;
+			color: @WhiteTextColor;
+		}
+	}
+.navcol {
+	position: static;
+	.nav {
+		list-style-type: none;
+		float: right;
+
+		&>li {
+			float: left;
+			//margin-left: 30px;
+			
+			.mainnav {
+				font-family: UbuntuMedium;
+				font-size: 19px;
+				color: @WhiteTextColor;
+				display: inline-block;
+				height: 42px;
+				line-height: 42px;
+				margin-top: 23px;
+				position: relative;
+				padding-right: 30px;
+				padding-left: 30px;
+				border-right: 2px solid @MenuBorderColor;
+
+				.fa {
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+				&:hover {
+					color: @ColorOnHover;
+				}
+			}
+			.last {
+				padding-right: 0px;
+				border-right: 0px;
+			}
+			&:hover .onHoverHome {
+				visibility: visible;
+				opacity: 1;
+			}
+			&:hover .onHoverAbout {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+		
+
+
+		.onHoverHome {
+			visibility: hidden;
+			opacity: 0;
+			position: absolute;
+			left: 50%;
+			transform:translate(-50%, 0%);
+			width: 87%;
+			background: @WhiteTextColor;
+			padding: 30px 0px;
+			z-index: 50;
+			transfrom: scale(0.5);
+			transition: all 1s cubic-bezier(.1, -1.5, .1, 2.5) 0s;
+
+			&>li {
+				float: left;
+
+				.submenu {
+					max-width: 300px;
+					padding: 0px 50px;
+					
+					.readMore {
+						.readMore();
+					}
+					ul {
+						.fa {
+							font-size: 9px;
+							color: @PinkColor;
+							position: relative;
+							top: -2px;
+						}
+						li {
+							display: inline-block;
+							.submenu_p_format();
+
+							a {
+								color: @DarkColor;
+							}
+
+							&:hover a {
+								color: @ColorOnHover;
+							}
+						}
+					}
+	
+					h4 {
+						.submenu_headings_format();
+						color: @DarkColor;
+						margin-bottom: 20px;
+					}
+	
+					img {
+						width: 200px;
+						height: 140px;
+						margin-bottom: 20px;
+					}
+					p {
+						.submenu_p_format();
+						line-height: 25px;
+					}
+
+					.newsCol {
+						width: 254px; //нужно @media query для ноутбука
+
+						h4 {
+							a {
+								color: @PinkColor;								
+							}
+
+							&:hover a{
+								color: @ColorOnHover;
+							}
+
+						}
+						&:first-child {
+							margin-left: -15px;
+							padding-left: 0px;
+						}
+					}
+				}
+
+				&:nth-child(2) {
+					.submenu {
+						border-left: 1px solid @MenuBorderColor;
+						border-right: 1px solid @MenuBorderColor;
+					}
+				}
+				&:last-child {
+					.submenu {
+						max-width: 100%;
+						padding-right: 0px;
+					}
+				}
+			}
+
+			
+		}
+		.onHoverAbout {
+			visibility: hidden;
+			opacity: 0;
+			position: absolute;
+			width: 15%;
+			background: @WhiteTextColor;
+			padding: 5px 15px;
+			z-index: 50;
+			transfrom: scale(0.5);
+			transition: all 1s cubic-bezier(.1, -1.5, .1, 2.5) 0s;
+
+			&>li {
+				font-family: UbuntuRegular;
+				font-size: 17px;
+				font-weight: 300;
+				line-height: 30px;
+
+				a {
+					color: @DarkColor;
+				}
+				&:hover a {
+					color: @ColorOnHover;
+				}
+			}
+		}
+	}
+}
+
+	.slideHeader {
+		display: inline-block;
+		text-align: center;
+		position: absolute;
+		top: 230px; 
+		left:50%;
+		transform:translate(-50%,0%);
+		width: 100%;
+		color: @WhiteTextColor;
+		h1{
+			font-family: Righteous;	
+			font-size: 110px;
+		}
+		h3 {
+			font-family: UbuntuRegular;
+			font-size: 20px;
+		}
+		
+		.sprites {
+			margin-top: 40px;
+			
+			li {
+				display: inline-block;
+				margin-left: 10px;
+
+				.fa {
+					font-size: 27px;
+					color: @WhiteTextColor;
+
+					&:hover {
+						color: @ColorOnHover;
+					}
+				}
+			}
+		}
+	}
+}
+
+.contentPart1 {
+	background: @WhiteTextColor;
+	padding: 40px 40px 70px 40px; 
+
+	h1 {
+		.contentHeadings();
+		border-bottom: 1px solid @ContentBorderColor;
+	}
+	.welcomeNoteCols {
+		padding-top: 40px;
+		img {
+			width: 100%;
+		}
+		h4 {
+			margin-top: 42px;
+			margin-bottom: 10px;
+			font-family: UbuntuMedium, sans-serif;
+			font-size: 17px;
+		}
+		p {
+			font-family: UbuntuLight, sans-serif;
+			font-size: 15px;
+			margin-bottom: 20px;
+		}
+		.readMore {
+			.readMore();
+		}
+	}
+}
+
+.contentPart2 {
+	background: url(../images/contentIrreproachableStyleBG.jpg) no-repeat;
+	background-size: 100% 100%;
+	height: 650px;
+	color: @WhiteTextColor;
+	position: relative;
+	
+	.toCenter {
+		display: inline-block;
+		text-align: center;
+		position: absolute; 
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+		width: 84%;
+		h1 {
+			.contentHeadings(110px, @WhiteTextColor);
+			width: 100%;
+		}
+		.underHeader {
+			margin-top: -30px;
+			font-family: UbuntuRegular, sans-serif;
+			font-size: 20px;
+		}
+		.para {
+			margin-top: 60px;
+			margin-bottom: 50px;
+			font-family: UbuntuLight;
+			font-size: 18px;
+		}
+		.readMore {
+			.readMore(@WhiteTextColor);
+		}
+	}
+}
+
+.contentPart3 {
+	background: @WhiteTextColor;
+	position: relative;
+	height: 700px;
+	padding: 40px 0px;
+
+	.toCenter {
+		display: inline-block;
+		text-align: center;
+		position: absolute; 
+		//top: 50%;
+		left: 50%;
+		transform:translate(-50%,0%);
+		width: 84%;
+		
+		h1 {
+			.contentHeadings();
+			border-bottom: 1px solid @ContentBorderColor;
+			width: 100%;
+			margin-bottom: 50px;
+		}
+		.colsPart3 {
+
+			h4 {
+				font-family: UbuntuRegular;
+				font-size: 20px;
+			}
+			.count {
+				color: @PinkColor;
+				font-family: UbuntuLight;
+				font-size: 147px;
+				letter-spacing: -15px;
+			}
+			p {
+				font-family: UbuntuLight;
+				font-size: 15px;
+				padding: 0px 16px;
+				margin-bottom: 20px;
+			}
+			.readMore {
+				.readMore();
+			}
+
+			&:hover .count {
+				color: @ColorOnHover;
+			}
+		}
+	}
+}
+.contentPart4 {
+	background: url(../images/contentInspiredByNatureBG.jpg) no-repeat;
+	background-size: 100% 125%;
+	background-position: 0% 50%;
+	height: 700px;
+	color: @WhiteTextColor;
+	position: relative;
+	
+	.toCenter {
+		display: inline-block;
+		text-align: center;
+		position: absolute; 
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+		width: 84%;
+		h1 {
+			.contentHeadings(110px, @WhiteTextColor);
+			width: 100%;
+		}
+		.underHeader {
+			margin-top: -30px;
+			font-family: UbuntuRegular, sans-serif;
+			font-size: 20px;
+		}
+	}
+}
