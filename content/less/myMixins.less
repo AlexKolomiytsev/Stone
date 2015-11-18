@@ -46,3 +46,21 @@
 		padding-bottom: 10px;
 		color: @color;
 }
+.borderSlice(@height: 95px, @width: 1px) {
+	position: absolute;
+	background: @WhiteTextColor;
+	height: @height;
+	width: @width;
+}
+.inputs(@top: 10px, @height: 60px) {
+	position: absolute;
+	top: @top;
+	left: 0px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 97%;
+	height: @height;
+	border: 0px solid @ContentBorderColor;
+	border-bottom: 1px solid @ContentBorderColor;
+	padding: 10px;
+}
