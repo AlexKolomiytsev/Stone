@@ -1,0 +1,86 @@
+@import url("myStyleHome.less");
+@import url("myMixins.less");
+@import url("myVariables.less");
+@import url("myFonts.less");
+
+.contentPart1Services {
+	text-align: center;
+	.toCenter {
+		height: 550px;
+		.mainScols {
+			margin-top: 50px;
+			h4 {
+				font-family: UbuntuRegular, sans-serif;
+				font-size: 20px;
+			}
+			img {
+				margin: 50px 0px 10px 0px;
+			}
+			p {
+				font-family: UbuntuLight, sans-serif;
+				font-size: 15px;
+				//margin-bottom: 0px;
+				padding: 30px;
+			}
+			.readMore {
+				.readMore();
+			}
+		}
+	}
+}
+.contentPart2Services {
+	background: url(../images/services4.jpg);
+	background-size: 100% 100%;
+}
+.contentPart4Services {
+	background: url(../images/contentIrreproachableStyleBG.jpg) no-repeat;
+	background-size: 100% 100%;
+	.toCenter {
+		.underHeader2nd {
+			margin: 50px 0px;
+			font-family: UbuntuLight, sans-serif, monospace;
+			font-size: 18px;
+		}
+		.readMore {
+			.readMore(@WhiteTextColor);
+		}
+	}
+}
+.contentPart5Services {
+	position: relative;
+	.toCenter {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 84%;
+		margin: 0px;
+		margin-top: 50px;
+		
+		.addServCol {
+			&:nth-child(1) {
+				padding-left: 0px;
+			}
+			&:nth-child(2) {
+				padding-right: 0px;
+			}
+			img {
+				width: 100%;
+				margin-bottom: 30px;
+			}		
+			h4 {
+				margin-bottom: 10px;
+				font-family: UbuntuMedium, sans-serif, monospace;
+				font-size: 17px;
+			}
+			p {
+				font-family: UbuntuLight, sans-serif, monospace;
+				font-size: 15px;
+				margin-bottom: 20px;
+			}
+			.readMore {
+				.readMore();
+			}
+		}
+
+	}
+}
