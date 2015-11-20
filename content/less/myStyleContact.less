@@ -1,0 +1,46 @@
+@import url("myStyleHome.less");
+@import url("myMixins.less");
+@import url("myVariables.less");
+@import url("myFonts.less");
+
+.contentPart1Contact {
+	padding: 40px;
+	.toCenter {
+		width: 100%;
+		left: 0px;
+		transform: translateX(0%);
+		height: 400px;
+		padding: 0px;
+	}
+}
+.contentPart7Contact {
+	height: 600px;
+
+	.toCenter {
+		.underHeading {
+			text-align: left;
+			.undHeadCols {
+				margin-top: 20px;
+				h4 {
+					font-family: UbuntuMedium, sans-serif, monospace;
+					font-size: 15px;
+					color: @DarkColor;
+				}
+				p {
+					font-family: UbuntuLight, sans-serif, monospace;
+					font-size: 15px;
+					color: @DarkColor;
+				}
+				a {
+					color: @PinkColor;
+					&:hover {
+						color: @ColorOnHover;
+					}
+				}
+				&:nth-child(1) {
+					padding-left: 0px;
+				}
+			}
+		}
+	}
+}
