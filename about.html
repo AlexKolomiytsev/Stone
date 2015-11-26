@@ -9,19 +9,21 @@
 	<link rel="stylesheet" href="content/css/external/bootstrap.css">
 	<link rel="stylesheet" href="content/libs/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="content/css/myStyleHome.css">
-	<script src="content/js/prefixfree.min.js" type="text/javascript"></script>
+	<!--<script src="content/js/prefixfree.min.js" type="text/javascript"></script>-->
+	<script src="content/js/nav.js" type="text/javascript"></script>
 </head>
 <body>
 	<div class="container-fluid">
 		<header class="row header headerAbout">
-			<section class="col-lg-4 logo">
+			<section class="col-lg-2 logo">
 				<img src="content/images/logo.png" height="48" width="48" alt="logo">
 				<h2>stone</h2>
 			</section>
-			<nav class="col-lg-7 navcol">
+			<nav class="col-lg-9 navcol">
 				<ul class="nav">
 					<li>
-						<a href="index.html" class="mainnav">Home <i class="fa fa-angle-down"></i></a>
+						<a href="index.html" class="mainnav first">Home</a>
+						<i class="fa fa-angle-down arrow" id="submenuHome" onclick="displaySubmenuHome()"></i>
 						<ul class="onHoverHome">
 							<li>
 								<div class="submenu">
@@ -79,7 +81,8 @@
 						</ul>
 					</li>
 					<li>
-						<a href="about.html" class="mainnav" style="color: #fedc3d">About <i class="fa fa-angle-down"></i></a>
+						<a href="about.html" class="mainnav second"  style="color: #fedc3d">About</a>
+						<i class="fa fa-angle-down arrow" id="submenuAbout" onclick="displaySubmenuAbout()"></i>
 						<ul class="onHoverAbout">
 							<li><a href="#">FAQs</a></li>
 							<li><a href="#">Team</a></li>
@@ -89,11 +92,12 @@
 					<li><a href="services.html" class="mainnav">Services</a></li>
 					<li><a href="#" class="mainnav">Folio</a></li>
 					<li><a href="#" class="mainnav">Blog</a></li>
-					<li><a href="contact.html" class="mainnav last">Contact</a></li>
+					<li><a href="contact.html" class="mainnav">Contact</a></li>
 				</ul>
 			</nav>
 			<article class="slideHeaderAbout">
 				<h1>
+
 					<a href="index.html">Home</a> / <span>About</span>
 				</h1>
 			</article>
@@ -104,7 +108,7 @@
 					About us
 				</h1>
 				<div class="col-lg-12 welcomeNoteColsAbout">
-					
+
 					<img src="content/images/about5.jpg" width="630" height="369" alt="wc">
 					<article>
 						<h4>
@@ -220,7 +224,7 @@
 					</div>
 					<div class="col-lg-6 solutionsCol">
 						<h4>
-							Pus et magnis dis parturientontes nascetur ridiculus mus. 
+							Pus et magnis dis parturientontes nascetur ridiculus mus.
 							Nulla dui. Fusce feugiat malesuad
 						</h4>
 						<ul>
@@ -229,7 +233,7 @@
 									01
 								</span>
 								<p>
-									Praesent vestibu lum molestie lacus. Aenean nonummyendrerit mauris. 
+									Praesent vestibu lum molestie lacus. Aenean nonummyendrerit mauris.
 									Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque.
 								</p>
 							</li>
@@ -246,8 +250,8 @@
 									03
 								</span>
 								<p>
-									Cum sociis natoque penatibus et magnis dis parturientontes nascetur 
-									ridiculus mus. Nulla dui. Fusce feugiat malesuadio. 
+									Cum sociis natoque penatibus et magnis dis parturientontes nascetur
+									ridiculus mus. Nulla dui. Fusce feugiat malesuadio.
 								</p>
 							</li>
 						</ul>
