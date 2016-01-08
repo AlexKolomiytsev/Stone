@@ -16,17 +16,20 @@
 <body>
 	<div class="container-fluid">
 		<header class="row header headerAbout">
+			<div class="static-nav">
 			<section class="col-xs-3 col-sm-2 col-md-2 col-lg-2 logo">
+				<a href="index.html">
 				<img src="content/images/logo.png" height="48" width="48" alt="logo">
 				<h2>stone</h2>
+				</a>
 			</section>
 			<nav class="col-xs-9 col-sm-9 col-md-9 col-lg-9 navcol">
-				<i class="fa fa-bars trigger fa-3x" onclick="displayNav()"></i>
+				<i class="fa fa-bars trigger fa-3x"></i>
 				<ul class="nav">
 					<li>
-						<i class="fa fa-angle-left arrow768" id="submenu768Home" onclick="displaySubmenuHome()"></i>
+						<i class="fa fa-angle-left arrow768" id="submenu768Home"></i>
 						<a href="index.html" class="mainnav first">Home</a>
-						<i class="fa fa-angle-down arrow" id="submenuHome" onclick="displaySubmenuHome()"></i>
+						<i class="fa fa-angle-down arrow" id="submenuHome"></i>
 						<ul class="onHoverHome">
 							<li>
 								<div class="submenu hidden-xs">
@@ -84,9 +87,9 @@
 						</ul>
 					</li>
 					<li>
-						<i class="fa fa-angle-left arrow768" id="submenu768About" onclick="displaySubmenuAbout()"></i>
+						<i class="fa fa-angle-left arrow768" id="submenu768About"></i>
 						<a href="about.html" class="mainnav second">About</a>
-						<i class="fa fa-angle-down arrow" id="submenuAbout" onclick="displaySubmenuAbout()"></i>
+						<i class="fa fa-angle-down arrow" id="submenuAbout"></i>
 						<ul class="onHoverAbout">
 							<li><a href="#">FAQs</a></li>
 							<li><a href="#">Team</a></li>
@@ -94,11 +97,12 @@
 						</ul>
 					</li>
 					<li><a href="services.html" class="mainnav"  style="color: #fedc3d">Services</a></li>
-					<li><a href="#" class="mainnav">Folio</a></li>
+					<li><a href="folio.html" class="mainnav">Folio</a></li>
 					<li><a href="#" class="mainnav">Blog</a></li>
 					<li><a href="contact.html" class="mainnav">Contact</a></li>
 				</ul>
 			</nav>
+			</div>
 			<article class="slideHeaderAbout">
 				<h1>
 					<a href="index.html">Home</a> / <span>Services</span>
