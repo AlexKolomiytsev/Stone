@@ -1,13 +1,14 @@
 window.addEventListener("load", function() {
+
 	var faUpDown = document.getElementsByClassName("arrow");
 	var faLeftRight = document.getElementsByClassName("arrow768");
 
 
+	// :::::::::: display submenu 'Home' ::::::::::
 	var submenu768Home = document.getElementById('submenu768Home');
 	var submenuHome = document.getElementById('submenuHome');
 	submenu768Home.addEventListener("click", displaySubmenuHome);
 	submenuHome.addEventListener("click", displaySubmenuHome);
-
 
 	function displaySubmenuHome() {
 		if(document.getElementsByClassName("onHoverAbout")[0].classList.contains("onHoverAboutOpen")) {
@@ -37,7 +38,7 @@ window.addEventListener("load", function() {
 			faLeftRight[0].classList.add('fa-angle-left');
 		}
 	}
-
+	//:::::::::: display submenu 'About' ::::::::::
 	var submenu768About = document.getElementById('submenu768About');
 	var submenuAbout = document.getElementById('submenuAbout');
 	submenu768About.addEventListener("click", displaySubmenuAbout);
@@ -73,6 +74,8 @@ window.addEventListener("load", function() {
 		}
 	}
 
+
+	// :::::::::: display trigger ::::::::::
 	var trigger = document.getElementsByClassName('trigger')[0];
 	trigger.addEventListener("click", displayNav);
 
@@ -89,7 +92,7 @@ window.addEventListener("load", function() {
 			trigger.classList.add('fa-bars');
 		}
 	}
-
+	// :::::::::: StickyNav ::::::::::
 	var nav = document.getElementsByClassName('navcol')[0];
 	var stickyHeader = document.getElementsByClassName('static-nav')[0];
 	var sourceNavPosition = nav.getBoundingClientRect().bottom + window.pageYOffset;
