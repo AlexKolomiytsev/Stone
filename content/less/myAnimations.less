@@ -1,3 +1,5 @@
+@import url("myVariables.less");
+
 @keyframes go-left-right {
   from {
     right: 0px;
@@ -37,5 +39,13 @@
     margin-top: 0px;
     transform: scale(1);
     opacity: 1;
+  }
+}
+@keyframes boxShadowAnimation {
+  from {
+    box-shadow: 0px 0px 15px @PinkColor;
+  }
+  to {
+    box-shadow: 0px 0px 10px @ColorOnHover;
   }
 }

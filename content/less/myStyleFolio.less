@@ -33,6 +33,104 @@
 	.toCenter {
 		position: relative;
 		height: auto;
+		.imageColumn {
+			.classForZoom {
+				overflow: hidden;
+				width: 300px;
+				height: 250px;
+				position: relative;
+				&:hover img{
+					transform: scale(1.3);
+					-webkit-filter: blur(5px);
+					-moz-filter: blur(5px);
+					filter: blur(5px);
+				}
+				&:hover .fa {
+					opacity: 1;
+				}
+				img {
+					transform: scale(1);
 
+					transition: all 0.5s ease 0s;
+				}
+				.fa {
+					opacity: 0;
+					position: absolute;
+					font-size: 50px;
+					color: @DarkColor;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					transition: all 0.5s ease 0s;
+					cursor: pointer;
+					text-shadow: 0px 0px 5px @ColorOnHover;
+				}
+			}
+			h4 {
+				font-family: UbuntuRegular, sans-serif, monospace;
+				font-size: 17px;
+				font-weight: 500;
+				color: @PinkColor;
+				margin: 10px 0px 5px 0px;
+				&:hover {
+					color: @ColorOnHover;
+					cursor: pointer;
+				}
+			}
+			p {
+				font-family: UbuntuRegular, sans-serif, monospace;
+				font-size: 15px;
+				font-weight: 500;
+				color: @DarkColor;
+				margin-bottom: 25px;
+				text-align: center;
+			}
+
+		}
+	}
+	.parent-popup {
+		background: fadeout(@DarkColor, 5%);
+		height: 100%;
+		opacity: 1;
+		position: fixed;
+		width: 100%;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		display: none;
+		.popup {
+			position: fixed;
+			width: 80%;
+			height: 80%;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			animation: boxShadowAnimation 3s infinite alternate;
+			//border: 1px solid @DarkColor;
+		}
+		.closePopup {
+			position: absolute;
+			top: 10%;
+			right: 11%;
+			color: @DarkColor;
+			text-shadow: 0px 0px 5px @WhiteTextColor;
+			font-size: 45px;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	.activeTab {
+		color: @PinkColor;
+	}
+	.open {
+		display: block;
+	}
+	.darken {
+		background: @DarkColor;
 	}
 }
