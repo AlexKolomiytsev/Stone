@@ -1,0 +1,142 @@
+@import url("myStyleHome.less");
+@import url("myMixins.less");
+@import url("myVariables.less");
+@import url("myFonts.less");
+
+.contentPart1Contact {
+	padding: 40px;
+	.toCenter {
+		width: 100%;
+		left: 0px;
+		transform: translateX(0%);
+		height: 400px;
+		padding: 0px;
+	}
+}
+.contentPart7Contact {
+	height: 600px;
+
+	.toCenter {
+		.underHeading {
+			text-align: left;
+			.undHeadCols {
+				margin-top: 20px;
+				h4 {
+					font-family: UbuntuMedium, sans-serif, monospace;
+					font-size: 15px;
+					color: @DarkColor;
+				}
+				p {
+					font-family: UbuntuLight, sans-serif, monospace;
+					font-size: 15px;
+					color: @DarkColor;
+				}
+				a {
+					color: @PinkColor;
+					&:hover {
+						color: @ColorOnHover;
+					}
+				}
+				&:nth-child(1) {
+					padding-left: 0px;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.contentPart7Contact {
+		height: 505px; //?????????????????????????????
+		.toCenter {
+			.underHeading {
+				.undHeadCols {
+					margin-top: 20px;
+					h4 {
+						font-size: 14px;
+					}
+					p {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}//закрывающий mq 768 ... 991
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+	.contentPart7Contact {
+		height: 615px; //?????????????????????????????
+		.toCenter {
+			.underHeading {
+				.undHeadCols {
+					margin-top: 20px;
+					h4 {
+						font-size: 14px;
+					}
+					p {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}//закрывающий mq 500 ... 767
+@media screen and (min-width: 320px) and (max-width: 499px) {
+	.contentPart1Contact {
+		padding: 5px;
+		.toCenter {
+			width: 100%;
+			left: 0px;
+			transform: translateX(0%);
+			height: 200px;
+			padding: 0px;
+		}
+	}
+	.contentPart7Contact {
+	height: 900px;
+
+	.toCenter {
+		.underHeading {
+			.undHeadCols {
+				margin-top: 10px;
+				h4 {
+					font-size: 14px;
+				}
+				p {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+}//закрывающий mq 320 ... 499
+
+@media screen and (max-width: 319px) {
+	.contentPart1Contact {
+		padding: 5px;
+		.toCenter {
+			width: 100%;
+			left: 0px;
+			transform: translateX(0%);
+			height: 200px;
+			padding: 0px;
+		}
+	}
+	.contentPart7Contact {
+	height: 900px;
+
+	.toCenter {
+		.underHeading {
+			.undHeadCols {
+				margin-top: 10px;
+				h4 {
+					font-size: 12px;
+				}
+				p {
+					font-size: 11px;
+				}
+			}
+		}
+	}
+}
+}

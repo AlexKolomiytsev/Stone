@@ -1,0 +1,447 @@
+@import url("myStyleHome.less");
+@import url("myMixins.less");
+@import url("myVariables.less");
+@import url("myFonts.less");
+
+.contentPart1Services {
+	text-align: center;
+	.toCenter {
+		height: 550px;
+		.mainScols {
+			margin-top: 50px;
+			h4 {
+				font-family: UbuntuRegular, sans-serif;
+				font-size: 20px;
+			}
+			img {
+				margin: 50px 0px 10px 0px;
+			}
+			p {
+				font-family: UbuntuLight, sans-serif;
+				font-size: 15px;
+				//margin-bottom: 0px;
+				padding: 30px;
+			}
+			.readMore {
+				.readMore();
+			}
+		}
+	}
+}
+.contentPart2Services {
+	background: url(../images/services4.jpg);
+	background-size: 100% 100%;
+}
+.contentPart4Services {
+	background: url(../images/contentIrreproachableStyleBG.jpg) no-repeat;
+	background-size: 100% 100%;
+	.toCenter {
+		.underHeader2nd {
+			margin: 50px 0px;
+			font-family: UbuntuLight, sans-serif, monospace;
+			font-size: 18px;
+		}
+		.readMore {
+			.readMore(@WhiteTextColor);
+		}
+	}
+}
+.contentPart5Services {
+	position: relative;
+	.toCenter {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 84%;
+		margin: 0px;
+		margin-top: 50px;
+		
+		.addServCol {
+			&:nth-child(1) {
+				padding-left: 0px;
+			}
+			&:nth-child(2) {
+				padding-right: 0px;
+			}
+			img {
+				width: 100%;
+				margin-bottom: 30px;
+			}		
+			h4 {
+				margin-bottom: 10px;
+				font-family: UbuntuMedium, sans-serif, monospace;
+				font-size: 17px;
+			}
+			p {
+				font-family: UbuntuLight, sans-serif, monospace;
+				font-size: 15px;
+				margin-bottom: 20px;
+			}
+			.readMore {
+				.readMore();
+			}
+		}
+
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) { 
+	.contentPart1Services {
+		.toCenter {
+			.mainScols {
+				margin-top: 30px;
+				h4 {
+					font-family: UbuntuRegular, sans-serif;
+					font-size: 20px;
+				}
+				img {
+					margin: 30px 0px 10px 0px;
+				}
+				p {
+					font-size: 15px;
+					padding: 0px;
+				}
+			}
+		}
+	}
+	.contentPart4Services {
+		.toCenter {
+			.underHeader {
+				font-size: 18px;
+			}
+			.underHeader2nd {
+				margin: 30px 0px;
+				font-family: UbuntuLight, sans-serif, monospace;
+				font-size: 16px;
+			}
+		}
+	}
+	.contentPart5Services {
+		height: 700px;
+		.toCenter {
+			margin-top: 30px;
+			
+			.addServCol {
+				&:nth-child(1) {
+					padding-left: 0px;
+				}
+				&:nth-child(2) {
+					padding-right: 0px;
+				}
+				img {
+					height: 250px;
+				}		
+				h4 {
+					margin-bottom: 10px;
+					font-family: UbuntuMedium, sans-serif, monospace;
+					font-size: 16px;
+				}
+				p {
+					font-family: UbuntuLight, sans-serif, monospace;
+					font-size: 14px;
+					margin-bottom: 20px;
+				}
+				.readMore {
+					.readMore();
+				}
+			}
+		}
+	}
+}//закрывающий mq 992 ... 1199
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.contentPart1Services {
+		height: 450px;
+		.toCenter {
+			.mainScols {
+				margin-top: 20px;
+				h4 {
+					font-size: 16px;
+				}
+				img {
+					margin: 20px 0px 20px 0px;
+					width: 110px;
+					height: 90px;
+				}
+				p {
+					font-size: 13px;
+					padding: 0px;
+				}
+			}
+		}
+	}
+	.contentPart4Services {
+		.toCenter {
+			.underHeader {
+				margin-top: -10px;
+				font-size: 15px;
+			}
+			.underHeader2nd {
+				margin: 30px 0px;
+				font-family: UbuntuLight, sans-serif, monospace;
+				font-size: 14px;
+			}
+		}
+	}
+	.contentPart5Services {
+		height: 550px;
+		.toCenter {
+			margin-top: 20px;
+			.addServCol {
+				img {
+					height: 200px;
+					margin-bottom: 10px;
+				}		
+				h4 {
+					margin-bottom: 10px;
+					font-size: 15px;
+				}
+				p {
+					font-size: 12px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}//закрывающий mq 768 ... 991
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+	.contentPart1Services {
+		padding: 0px;
+		height: 725px;
+		.toCenter {
+			.mainScols {
+				margin-top: 0px;
+				padding-bottom: 20px;
+				border-bottom: 1px solid @ContentBorderColor;
+				margin-bottom: 0px;
+				h4 {
+					margin-top: 10px;
+					font-size: 16px;
+				}
+				img {
+					margin: 5px 0px 5px 0px;
+					width: 110px;
+					height: 90px;
+				}
+				p {
+					font-size: 13px;
+					padding: 0px;
+					margin-bottom: -15px;
+				}
+			}
+		}
+	}
+	.contentPart4Services {
+		//height: 700px;
+		.toCenter {
+			width: 95%;
+			.underHeader {
+				margin-top: -10px;
+				font-size: 14px;
+				font-weight: 600;
+			}
+			.underHeader2nd {
+				margin: 0px 0px;
+				font-size: 11.5px;
+			}
+		}
+	}
+	.contentPart5Services {
+		height: 730px;
+		.toCenter {
+			margin-top: 10px;
+			.addServCol {
+				padding: 0px;
+				margin-top: 30px;
+				padding-bottom: 25px;
+				border-bottom: 1px solid @ContentBorderColor;
+				&:first-child {
+					margin-top: 10px;
+				}
+				&:last-child {
+					border-bottom: none;
+				}
+				img {
+					height: 150px;
+					width: 70%;
+					margin-bottom: 10px;
+				}		
+				h4 {
+					margin-bottom: 10px;
+					font-size: 14px;
+				}
+				p {
+					font-size: 11.5px;
+					margin-bottom: -10px;
+				}
+			}
+		}
+	}
+}//закрывающий mq 500 ... 767
+@media screen and (min-width: 320px) and (max-width: 499px) {
+	.contentPart1Services {
+		padding: 0px;
+		height: 765px;
+		.toCenter {
+			.mainScols {
+				margin-top: 0px;
+				padding-bottom: 20px;
+				border-bottom: 1px solid @ContentBorderColor;
+				margin-bottom: 0px;
+				h4 {
+					margin-top: 10px;
+					font-size: 15px;
+				}
+				img {
+					margin: 5px 0px 5px 0px;
+					width: 110px;
+					height: 90px;
+				}
+				p {
+					font-size: 12px;
+					padding: 0px;
+					margin-bottom: -15px;
+				}
+			}
+		}
+	}
+	.contentPart2Services {
+		height: 250px;
+		line-height: 25px;
+		background: url(../images/services4.jpg);
+		background-size: 100% 100%;
+	}
+	.contentPart4Services {
+		//height: 700px;
+		.toCenter {
+			width: 95%;
+			.underHeader {
+				margin-top: -10px;
+				font-size: 13px;
+				font-weight: 600;
+			}
+			.underHeader2nd {
+				margin: 0px 0px;
+				margin-bottom: -15px;
+				font-size: 11.5px;
+			}
+		}
+	}
+	.contentPart5Services {
+		height: 830px;
+		.toCenter {
+			margin-top: 10px;
+			.addServCol {
+				padding: 0px;
+				margin-top: 30px;
+				padding-bottom: 25px;
+				border-bottom: 1px solid @ContentBorderColor;
+				&:first-child {
+					margin-top: 10px;
+				}
+				&:last-child {
+					border-bottom: none;
+				}
+				img {
+					height: 150px;
+					width: 70%;
+					margin-bottom: 10px;
+				}		
+				h4 {
+					margin-bottom: 10px;
+					font-size: 14px;
+				}
+				p {
+					font-size: 11.5px;
+					margin-bottom: -10px;
+				}
+			}
+		}
+	}
+}//закрывающий mq 320 ... 499
+
+@media screen and (max-width: 319px) {
+	.contentPart1Services {
+		padding: 0px;
+		height: 790px; //////////////////////////////////for <320 height
+		.toCenter {
+			.mainScols {
+				margin-top: 0px;
+				padding-bottom: 20px;
+				border-bottom: 1px solid @ContentBorderColor;
+				margin-bottom: 0px;
+				h4 {
+					margin-top: 10px;
+					font-size: 14px;
+				}
+				img {
+					margin: 5px 0px 5px 0px;
+					width: 90px;
+					height: 70px;
+				}
+				p {
+					font-size: 11px;
+					padding: 0px;
+					margin-bottom: -15px;
+				}
+			}
+		}
+	}
+	.contentPart2Services {
+		height: 200px;
+		line-height: 25px;
+		background: url(../images/services4.jpg);
+		background-size: 100% 100%;
+		p {
+			line-height: 15px;
+		}
+	}
+	.contentPart4Services {
+		height: 300px;
+		.toCenter {
+			width: 95%;
+			.underHeader {
+				margin-top: -10px;
+				font-size: 12px;
+				font-weight: 600;
+			}
+			.underHeader2nd {
+				margin: 0px 0px;
+				margin-bottom: -15px;
+				font-size: 11px;
+			}
+		}
+	}
+		.contentPart5Services {
+		height: 870px;
+		.toCenter {
+			margin-top: 10px;
+			.addServCol {
+				padding: 0px;
+				margin-top: 30px;
+				padding-bottom: 25px;
+				border-bottom: 1px solid @ContentBorderColor;
+				&:first-child {
+					margin-top: 10px;
+				}
+				&:last-child {
+					border-bottom: none;
+				}
+				img {
+					height: 150px;
+					width: 70%;
+					margin-bottom: 10px;
+				}		
+				h4 {
+					margin-bottom: 10px;
+					font-size: 14px;
+				}
+				p {
+					font-size: 11.5px;
+					margin-bottom: -10px;
+				}
+			}
+		}
+	}
+}

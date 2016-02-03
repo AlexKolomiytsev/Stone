@@ -8,10 +8,13 @@
 	<link rel="stylesheet" href="content/css/external/reset.css">
 	<link rel="stylesheet" href="content/css/external/bootstrap.css">
 	<link rel="stylesheet" href="content/libs/font-awesome/css/font-awesome.min.css">
+
 	<link rel="stylesheet" href="content/css/myStyleHome.css">
 	<link rel="stylesheet" href="content/css/myStyleContact.css">
-	<script src="content/js/prefixfree/prefixfree.min.js" type="text/javascript"></script>
-	<script src="content/js/nav.js" type="text/javascript"></script>
+	<!--<link rel="stylesheet" href="content/css/all.css">-->
+
+	<script src="content/js/myScripts/production/nav.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="content/js/myScripts/production/form.min.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -141,19 +144,19 @@
 				</div>
 				<form action="" method="post" name="feedback">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 formCol">
-						<input type="text" name="name" placeholder="Name"/><br/>
-						<input type="email" name="email" placeholder="Email"/><br/>
-						<input type="tel" name="userTel" placeholder="Phone"/><br/>
+						<input type="text" name="name" placeholder="Name" data-reg="^[a-zA-Z0-9-_\.]{4,20}$"/><br/>
+						<input type="email" name="email" placeholder="Email" data-reg="^[\w-\.]+@[\w-]+\.[a-z]{2,3}$"/><br/>
+						<input type="tel" name="userTel" placeholder="Phone" data-reg="^\d[\d\(\)\ -]{4,14}\d$"/><br/>
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 formCol">
-						<textarea name="message" placeholder="Message"></textarea>
+						<textarea name="message" placeholder="Message" data-reg="^[a-zA-Z0-9-_\.]"></textarea>
 					</div>
 					<div class="row formSubmit">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<input type="submit" value="Send">
-							<div class="readMore"><a href="#" onclick="document.forms.feedback.submit();return!1"><i class="fa fa-angle-right"></i></a></div>
-							<input type="reset" value="Clear">
-							<div class="readMore"><a href="#" onclick="document.forms.feedback.reset();return!1"><i class="fa fa-angle-right"></i></a></div>
+							<input type="submit" value="Send" class="btnSubmit">
+							<div class="readMore btnSubmit"><a href="#"><i class="fa fa-angle-right"></i></a></div>
+							<input type="reset" value="Clear" class="btnReset">
+							<div class="readMore btnReset"><a href="#" onclick="document.forms.feedback.reset();return!1"><i class="fa fa-angle-right"></i></a></div>
 						</div>
 					</div>
 				</form>
