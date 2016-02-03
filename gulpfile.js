@@ -29,7 +29,7 @@ gulp.task('styles', function() {
 });
 gulp.task('scripts', function() {
     return gulp.src('content/js/myScripts/./*.js', {since: gulp.lastRun('scripts')})
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(rename(function(path) {
             path.extname = '.min.js'
         }))
@@ -37,10 +37,10 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('clean', function() {
-    return del(['content/js/myScripts/production/*.js'/*, 'public/'*/]);
+    return del(['content/js/myScripts/production/*.js', 'content/css/all.css']);
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel(/*'styles',*/'scripts')));
+gulp.task('build', gulp.series('clean', gulp.parallel('styles','scripts')));
 
 gulp.task('watch', function () {
     gulp.watch('content/js/myScripts/*.js', gulp.series('scripts'));
