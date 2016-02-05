@@ -13,7 +13,6 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 
 gulp.task('styles', function() {
-
     return gulp.src('content/less/**/*.less'/*, {since: gulp.lastRun('styles')}*/)
         .pipe(debug({title: "src"}))
         .pipe(sourcemaps.init())

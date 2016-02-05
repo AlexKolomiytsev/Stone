@@ -30,12 +30,12 @@
 				</div>
 				<form action="" method="post" name="feedback">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 formCol">
-						<input type="text" class="formFields" name="name" placeholder="Name" required data-reg="^[a-zA-Z0-9-_\.]{4,20}$"/><br/>
-						<input type="email" class="formFields" name="email" placeholder="Email" required data-reg="^[\w-\.]+@[\w-]+\.[a-z]{2,3}$"/><br/>
-						<input type="tel" class="formFields" name="userTel" placeholder="Phone" required data-reg="^\d[\d\(\)\ -]{4,14}\d$"/><br/>
+						<input type="text" class="formFields" name="name" placeholder="Name" required data-reg="^[a-zA-Z0-9-_\.]{4,20}$" pattern="^[a-zA-Z0-9-_\.]{4,20}$"/><br/>
+						<input type="email" class="formFields" name="email" placeholder="Email" required data-reg="^[\w-\.]+@[\w-]+\.[a-z]{2,3}$" pattern="^[\w-\.]+@[\w-]+\.[a-z]{2,3}$"/><br/>
+						<input type="tel" class="formFields" name="userTel" placeholder="Phone" required data-reg="^\d[\d\(\)\ -]{4,14}\d$" pattern="^\d[\d\(\)\ -]{4,14}\d$"/><br/>
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 formCol">
-						<textarea class="formFields" name="message" placeholder="Message" required data-reg="^[a-zA-Z0-9-_\.]"></textarea>
+						<textarea class="formFields" name="message" placeholder="Message" required data-reg="^[а-яёА-ЯЁa-zA-Z0-9-_\.]"></textarea>
 					</div>
 					<div class="row formSubmit">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

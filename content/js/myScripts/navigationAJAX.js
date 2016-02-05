@@ -21,8 +21,8 @@ window.addEventListener("load", function() {
             http.open('get', link);
             http.addEventListener('readystatechange', function() {
                 if(http.readyState == 4) {
-                    //content.innerHTML = "";
-                    content.insertAdjacentHTML('beforeend', http.responseText);
+                    content.innerHTML = http.responseText;
+                   // content.insertAdjacentHTML('beforeend', http.responseText);
 
                     folioAjaxInit();
                     //WorkingWithLS.init();
@@ -63,18 +63,18 @@ window.addEventListener("load", function() {
 
             this.classList.add('activeMainnav');
 
-            content.innerHTML = "";
 
-            if (stem == 'home') {
-                for (var i = 1; i <= 8; i++ ) {
-                    (function (q) {
-                        base = 'content/navigation/home/part'+[q]+'.html';
-                        showContent(base);
-                    })(i);
-                }
-            }
-            else showContent(base);
 
+            //if (stem == 'home') {
+            //    for (var i = 1; i <= 8; i++ ) {
+            //        (function (q) {
+            //            base = 'content/navigation/home/part'+[q]+'.html';
+            //            showContent(base);
+            //        })(i);
+            //    }
+            //}
+            //else showContent(base);
+            showContent(base);
             //history.pushState(null,null, '/'+stem);
 
             return false;
@@ -90,15 +90,16 @@ window.addEventListener("load", function() {
     function formValidation() {
         var fields = document.getElementsByClassName('formFields');
         var buttons = document.getElementsByClassName('formButtons');
+        var form = document.getElementsByName('feedback')[0];
 
-        formModule.init(fields, buttons);
+        formModule.init(fields, buttons, form);
     }
-    //showContent('content/navigation/home.html');
-    for (var i = 1; i <= 8; ++i ) {
-        (function (q) {
-            var base = 'content/navigation/home/part'+[q]+'.html';
-            showContent(base);
-        })(i);
-    }
+    showContent('content/navigation/home.html');
+    //for (var i = 1; i <= 8; ++i ) {
+    //    (function (q) {
+    //        var base = 'content/navigation/home/part'+[q]+'.html';
+    //        showContent(base);
+    //    })(i);
+    //}
     navButtons[0].classList.add('activeMainnav');
 });

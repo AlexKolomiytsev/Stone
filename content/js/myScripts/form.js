@@ -4,23 +4,9 @@
 var formModule = (function() {
     var result = {};
 
-    function isValidOK(fields) {
-        //e.preventDefault();
-        //var isError;
-        //for (var i = 0; i < fields.length; ++i) {
-        //    if(fields[i].hasAttribute('invalid') || fields[i].value == "") {
-        //        isError = true;
-        //        break;
-        //    }
-        //    else isError = false;
-        //}
-        //if(isError) alert('Something bad with your form...');
-        //else alert('Everything is OK!');
-    }
-
-    function clearForm() {
-        localStorage.clear();
-    }
+    //function clearForm() {
+    //    localStorage.clear();
+    //}
 
     function setLS() {
         var patternFromAttr = this.getAttribute("data-reg");
@@ -44,40 +30,30 @@ var formModule = (function() {
         }
     }
 
-    function start(fields, buttons) {
+    function start(fields, buttons, form) {
         for (var i = 0; i < fields.length; i++) {
             fields[i].addEventListener("change", setLS);
         }
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].addEventListener("click", function(e) {
-                var isNotPrevent;
-                for (var i = 0; i < fields.length; i++) {
-                    if (fields[i].getAttribute('value') != "") {
-                        isNotPrevent = true;
+                if (this.getAttribute('name') == 'submit') {
+                    if(form.checkValidity()) {
+                        e.preventDefault();
+                        alert("Your message is send!!");
                     }
                 }
-                if(this.name == 'submit' || !isNotPrevent) {
-                    e.preventDefault();
-                    var isError;
-                    for (var i = 0; i < fields.length; ++i) {
-                        if(fields[i].hasAttribute('invalid') || fields[i].value == "") {
-                            isError = true;
-                            break;
-                        }
-                        else isError = false;
+                else if (this.getAttribute('name') == 'reset') {
+                    localStorage.clear();
+                    for (var i = 0; i < fields.length; i++) {
+                        fields[i].style.background = 'white';
                     }
-                    if(isError) alert('Something bad with your form...');
-                    else alert('Everything is OK!');
                 }
-                else if (this.name == 'reset') {
-                    clearForm();
-                }
-                //console.log(this.name);
+                console.log(this.name);
             });
         }
     }
-    result.init = function(fields, buttons) {
-        start(fields, buttons);
+    result.init = function(fields, buttons, form) {
+        start(fields, buttons, form);
         if(localStorage.length > 0) setValue(fields);
     };
 
