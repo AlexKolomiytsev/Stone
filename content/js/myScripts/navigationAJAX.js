@@ -26,6 +26,7 @@ window.addEventListener("load", function() {
 
                     folioAjaxInit();
                     //WorkingWithLS.init();
+                    formValidation();
 
                     ajaxLoader.hide();
                 }
@@ -85,12 +86,19 @@ window.addEventListener("load", function() {
             navButtons[i].classList.remove('activeMainnav');
         }
     }
-    showContent('content/navigation/home.html');
-    //for (var i = 1; i <= 8; ++i ) {
-    //    (function (q) {
-    //        var base = 'content/navigation/home/part'+[q]+'.html';
-    //        showContent(base);
-    //    })(i);
-    //}
+
+    function formValidation() {
+        var fields = document.getElementsByClassName('formFields');
+        var buttons = document.getElementsByClassName('formButtons');
+
+        formModule.init(fields, buttons);
+    }
+    //showContent('content/navigation/home.html');
+    for (var i = 1; i <= 8; ++i ) {
+        (function (q) {
+            var base = 'content/navigation/home/part'+[q]+'.html';
+            showContent(base);
+        })(i);
+    }
     navButtons[0].classList.add('activeMainnav');
 });

@@ -1,75 +1,85 @@
 /**
  * Created by sanya on 03.02.2016.
  */
-    var WorkingWithLS = (function()  {
-        var result = {};
+var formModule = (function() {
+    var result = {};
 
-        var name = document.getElementsByName('name')[0];
-        var mail = document.getElementsByName('email')[0];
-        var tel = document.getElementsByName('userTel')[0];
-        var txtarea = document.getElementsByName('message')[0];
+    function isValidOK(fields) {
+        //e.preventDefault();
+        //var isError;
+        //for (var i = 0; i < fields.length; ++i) {
+        //    if(fields[i].hasAttribute('invalid') || fields[i].value == "") {
+        //        isError = true;
+        //        break;
+        //    }
+        //    else isError = false;
+        //}
+        //if(isError) alert('Something bad with your form...');
+        //else alert('Everything is OK!');
+    }
 
-        var btnReset = document.getElementsByClassName('btnReset');
-        var btnSubmit = document.getElementsByClassName('btnSubmit');
+    function clearForm() {
+        localStorage.clear();
+    }
 
-        var inputs = [name, mail, tel, txtarea];
+    function setLS() {
+        var patternFromAttr = this.getAttribute("data-reg");
+        var pattern = new RegExp(patternFromAttr, 'i');
+        var inputVal = this.value;
 
-        function setLS() {
-            var patternFromAttr = this.getAttribute("data-reg");
-            var pattern = new RegExp(patternFromAttr, 'i');
-            var inputVal = this.value;
-
-            if(pattern.test(inputVal)) {
-                this.style.background = '#9DE0AD';
-                this.removeAttribute("invalid");
-                localStorage.setItem(this.name, this.value);
-            }
-            else {
-                this.style.background = '#FF5A5A';
-                this.setAttribute("invalid","");
-            }
+        if(pattern.test(inputVal)) {
+            this.style.background = '#9DE0AD';
+            this.removeAttribute("invalid");
+            localStorage.setItem(this.name, this.value);
         }
-
-        function setValue() {
-            name.value = localStorage.getItem('name');
-            mail.value = localStorage.getItem('email');
-            tel.value = localStorage.getItem('userTel');
-            txtarea.value = localStorage.getItem('message');
+        else {
+            this.style.background = '#FF5A5A';
+            this.setAttribute("invalid","");
         }
+    }
 
-        function isValidOK(e) {
-            e.preventDefault();
-            var isError;
-            for (var i = 0; i < inputs.length; ++i) {
-                if(inputs[i].hasAttribute('invalid') || inputs[i].value == "") {
-                    isError = true;
-                    break;
+    function setValue(fields) {
+        for (var i = 0; i < fields.length; i++){
+            fields[i].value = localStorage.getItem(fields[i].name);
+        }
+    }
+
+    function start(fields, buttons) {
+        for (var i = 0; i < fields.length; i++) {
+            fields[i].addEventListener("change", setLS);
+        }
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", function(e) {
+                var isNotPrevent;
+                for (var i = 0; i < fields.length; i++) {
+                    if (fields[i].getAttribute('value') != "") {
+                        isNotPrevent = true;
+                    }
                 }
-                else isError = false;
-            }
-            if(isError) alert('Something bad with your form...');
-            else alert('Everything is OK!');
+                if(this.name == 'submit' || !isNotPrevent) {
+                    e.preventDefault();
+                    var isError;
+                    for (var i = 0; i < fields.length; ++i) {
+                        if(fields[i].hasAttribute('invalid') || fields[i].value == "") {
+                            isError = true;
+                            break;
+                        }
+                        else isError = false;
+                    }
+                    if(isError) alert('Something bad with your form...');
+                    else alert('Everything is OK!');
+                }
+                else if (this.name == 'reset') {
+                    clearForm();
+                }
+                //console.log(this.name);
+            });
         }
-        function clearForm() {
-            localStorage.clear();
-        }
+    }
+    result.init = function(fields, buttons) {
+        start(fields, buttons);
+        if(localStorage.length > 0) setValue(fields);
+    };
 
-        function start() {
-            for (var i = 0; i < inputs.length; ++i) {
-                inputs[i].addEventListener("change", setLS);
-            }
-            for (var i = 0; i < btnSubmit.length; ++i) {
-                btnSubmit[i].addEventListener("click", isValidOK);
-            }
-            for (var i = 0; i < btnReset.length; ++i) {
-                btnReset[i].addEventListener("click", clearForm);
-            }
-        }
-
-        result.init = function() {
-            start();
-            if(localStorage.length > 0) setValue();
-        };
-
-        return result;
-    })();
+    return result;
+})();

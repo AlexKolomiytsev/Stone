@@ -5,18 +5,18 @@
         </h1>
         <form action="" method="post" name="feedback">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 formCol">
-                <input type="text" name="name" placeholder="Name" data-reg="^[a-zA-Z0-9-_\.]{4,20}$"/><br/>
-                <input type="email" name="email" placeholder="Email" data-reg="^[\w-\.]+@[\w-]+\.[a-z]{2,3}$"/><br/>
-                <input type="tel" name="userTel" placeholder="Phone" data-reg="^\d[\d\(\)\ -]{4,14}\d$"/><br/>
+                <input type="text" class="formFields" name="name" placeholder="Name" required data-reg="^[a-zA-Z0-9-_\.]{4,20}$"/><br/>
+                <input type="email" class="formFields" name="email" placeholder="Email" required data-reg="^[\w-\.]+@[\w-]+\.[a-z]{2,3}$"/><br/>
+                <input type="tel" class="formFields" name="userTel" placeholder="Phone" required data-reg="^\d[\d\(\)\ -]{4,14}\d$"/><br/>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 formCol">
-                <textarea name="message" placeholder="Message" data-reg="^[a-zA-Z0-9-_\.]"></textarea>
+                <textarea class="formFields" name="message" placeholder="Message" required data-reg="^[a-zA-Z0-9-_\.]"></textarea>
             </div>
             <div class="row formSubmit">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <input type="submit" value="Send" class="btnSubmit">
+                    <input type="submit" name="submit" value="Send" class="formButtons">
                     <div class="readMore btnSubmit"><a href="#"><i class="fa fa-angle-right"></i></a></div>
-                    <input type="reset" value="Clear" class="btnReset">
+                    <input type="reset" name="reset" value="Clear" class="formButtons">
                     <div class="readMore btnReset"><a href="#" onclick="document.forms.feedback.reset();return!1"><i class="fa fa-angle-right"></i></a></div>
                 </div>
             </div>

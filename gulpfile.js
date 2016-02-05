@@ -37,14 +37,14 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('clean', function() {
-    //return del(['content/js/myScripts/production/*.js', 'content/css/all.css']);
-    return del(['content/css/all.css']);
+    return del(['content/js/myScripts/production/*.js'/*, 'content/css/all.css'*/]);
+    //return del(['content/css/all.css']);
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('styles'/*,'scripts'*/)));
+gulp.task('build', gulp.series('clean', gulp.parallel(/*'styles',*/'scripts')));
 
 gulp.task('watch', function () {
-    gulp.watch('content/less/*.*', gulp.series('styles'));
+    //gulp.watch('content/less/*.*', gulp.series('styles'));
     gulp.watch('content/js/myScripts/*.*', gulp.series('scripts'));
     //gulp.watch('content/**/*.*', gulp.series('content'));
 });
