@@ -1,7 +1,6 @@
 /**
  * Created by sanya on 03.02.2016.
  */
-window.addEventListener("load", function() {
     var WorkingWithLS = (function()  {
         var result = {};
 
@@ -74,8 +73,3 @@ window.addEventListener("load", function() {
 
         return result;
     })();
-
-    WorkingWithLS.init();
-    //localStorage.clear();
-
-});

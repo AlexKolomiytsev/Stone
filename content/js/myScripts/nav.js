@@ -17,6 +17,7 @@ window.addEventListener("load", function() {
 			faUpDown[1].classList.add('fa-angle-down');
 			faLeftRight[1].classList.remove('fa-angle-right');
 			faLeftRight[1].classList.add('fa-angle-left');
+
 		}
 		var submElem = document.getElementsByClassName("onHoverHome")[0];
 		submElem.classList.toggle('onHoverHomeOpen');
@@ -24,10 +25,21 @@ window.addEventListener("load", function() {
 		if(faUpDown[0].classList.contains('fa-angle-down')) {
 			faUpDown[0].classList.remove('fa-angle-down');
 			faUpDown[0].classList.add('fa-angle-up');
+			try {
+				var navBlock = document.getElementsByClassName('folioNav')[0];
+				navBlock.classList.remove('folioNavZindex');
+			}
+			catch (ex) {}
 		}
 		else {
 			faUpDown[0].classList.remove('fa-angle-up');
 			faUpDown[0].classList.add('fa-angle-down');
+			try {
+				var navBlock = document.getElementsByClassName('folioNav')[0];
+				navBlock.classList.add('folioNavZindex');
+			}
+			catch (ex) {}
+
 		}
 		if(faLeftRight[0].classList.contains('fa-angle-left')) {
 			faLeftRight[0].classList.remove('fa-angle-left');
@@ -67,10 +79,20 @@ window.addEventListener("load", function() {
 		if(faLeftRight[1].classList.contains('fa-angle-left')) {
 			faLeftRight[1].classList.remove('fa-angle-left');
 			faLeftRight[1].classList.add('fa-angle-right');
+			try {
+				var navBlock = document.getElementsByClassName('folioNav')[0];
+				navBlock.classList.remove('folioNavZindex');
+			}
+			catch (ex) {}
 		}
 		else {
 			faLeftRight[1].classList.remove('fa-angle-right');
 			faLeftRight[1].classList.add('fa-angle-left');
+			try {
+				var navBlock = document.getElementsByClassName('folioNav')[0];
+				navBlock.classList.add('folioNavZindex');
+			}
+			catch (ex) {}
 		}
 	}
 

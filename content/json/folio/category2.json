@@ -1,0 +1,39 @@
+{
+  "updates": [
+    {
+      "url": "content/images/slide33.jpg",
+      "heading": "Malesuada fames ac",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim...."
+    },
+    {
+      "url": "content/images/contentInspiredByNatureBG.jpg",
+      "heading": "In faucibus",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim...."
+    },
+    {
+      "url": "content/images/slide11.jpg",
+      "heading": "Donec tellus leo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim...."
+    },
+    {
+      "url": "content/images/slide22.jpg",
+      "heading": "Suspendisse arcu nisl",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim...."
+    },
+    {
+      "url": "content/images/slide33.jpg",
+      "heading": "Malesuada fames ac",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim...."
+    },
+    {
+      "url": "content/images/slide44.jpg",
+      "heading": "In faucibus",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim...."
+    },
+    {
+      "url": "content/images/services5.jpg",
+      "heading": "In faucibus risus",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim...."
+    }
+  ]
+}

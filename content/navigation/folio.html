@@ -1,0 +1,39 @@
+		<section class="row contentPart1 contentPart1Folio">
+			<div class="col-lg-12 folioNav">
+				<ul class="folioNavUl">
+					<li id="showAll">Show all</li>
+					<li id="category1">Category 1</li>
+					<li id="category2">Category 2</li>
+				</ul>
+			</div>
+			<div class="toCenter" id="containerForAjax">
+				<script id="template" type="text/x-handlebars-template">
+					{{#each updates}}
+					<figure class="col-lg-4 col-md-4 col-sm-6 col-xs-12 imageColumn">
+						<div class="classForZoom">
+							<img src="{{url}}" height="250" width="300">
+							<i class="fa fa-search-plus"></i>
+						</div>
+						<h4>{{heading}}</h4>
+						<p>{{description}}</p>
+					</figure>
+					{{/each}}
+				</script>
+			</div>
+			<div class="parent-popup">
+				<div class="popup"></div>
+				<i class="fa fa-times closePopup"></i>
+			</div>
+
+		</section>
+		<footer class="row vault">
+			<div class="col-sm-12 col-md-12 col-lg-12 logo">
+				<div class="toCenter">
+					<img src="content/images/logo.png" height="48" width="48" alt="logo">
+					<h2>stone</h2>
+					<p>
+						<a href="#">STONE</a> &copy 2015 • <a href="#">PRIVACY POLICY</a>
+					</p>
+				</div>
+			</div>
+		</footer>
