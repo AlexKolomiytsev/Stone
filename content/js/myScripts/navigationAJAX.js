@@ -65,7 +65,7 @@ window.addEventListener("load", function() {
             content.innerHTML = "";
 
             if (stem == 'home') {
-                for (var i = 1; i <= 8; ++i ) {
+                for (var i = 1; i <= 8; i++ ) {
                     (function (q) {
                         base = 'content/navigation/home/part'+[q]+'.html';
                         showContent(base);

@@ -15,16 +15,16 @@ const rename = require('gulp-rename');
 gulp.task('styles', function() {
 
     return gulp.src('content/less/**/*.less'/*, {since: gulp.lastRun('styles')}*/)
-        //.pipe(debug({title: "src"}))
-        //.pipe(sourcemaps.init())
+        .pipe(debug({title: "src"}))
+        .pipe(sourcemaps.init())
         .pipe(less())
-        //.pipe(autoprefixer({
-        //    browsers: ['last 2 versions','last 2 Safari versions','last 2 Explorer versions','last 2 ff versions','last 2 Opera versions'],
-        //    cascade: false
-        //}))
-        //.pipe(sourcemaps.write())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions','last 2 Safari versions','last 2 Explorer versions','last 2 ff versions','last 2 Opera versions'],
+            cascade: false
+        }))
+        .pipe(sourcemaps.write())
         .pipe(concat('all.css'))
-        //.pipe(minifyCss())
+        .pipe(minifyCss())
         .pipe(gulp.dest('content/css'));
 });
 gulp.task('scripts', function() {
