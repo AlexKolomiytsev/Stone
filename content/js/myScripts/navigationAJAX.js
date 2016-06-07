@@ -36,7 +36,7 @@ window.addEventListener("load", function() {
             document.location = link;
         }
     };
-
+    
     function createRequestObject() {
         try { return new XMLHttpRequest() }
         catch(e) {
